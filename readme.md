@@ -1,4 +1,7 @@
 # My install Bash script for Vagrant.
+Much like [Jeffrey Way](https://github.com/JeffreyWay/Vagrant-Setup) and [Eric Barnes](https://github.com/ericbarnes/Vagrant-Setup), this is my version of Jeffrey's Vagrant Setup.
+
+Similar to both of theirs except it installs Nginx over Apache, as I use Nginx in my production environment so I want this to be as close to it as possible. Along with that it also has a few (really just MySQL right now) configuration variables for easily changing things for different environments.
 
 ## Thanks goes to the following references:
 - [https://laracasts.com/lessons/vagrant-and-laravel](https://laracasts.com/lessons/vagrant-and-laravel)
