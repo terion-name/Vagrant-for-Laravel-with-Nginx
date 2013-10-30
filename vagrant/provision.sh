@@ -2,7 +2,7 @@
 
 # CONFIGURATION VARIABLES
 MYSQL_PASSWORD='root'
-LARAVEL_PROJECT=true
+LARAVEL_PROJECT=false
 
 echo "--- Good morning, master. Let's get to work. Installing now. ---"
 
