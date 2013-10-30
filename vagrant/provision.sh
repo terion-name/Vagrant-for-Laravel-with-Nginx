@@ -2,6 +2,7 @@
 
 # CONFIGURATION VARIABLES
 MYSQL_PASSWORD='root'
+LARAVEL_PROJECT=false
 
 echo "--- Good morning, master. Let's get to work. Installing now. ---"
 
@@ -57,7 +58,9 @@ echo "--- Composer is the future. But you knew that, did you master? Nice job. -
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
+if $LARAVEL_PROJECT; then
 echo "--- Lets make sure the app storage directory is writable. ---"
 chmod -R o+w /vagrant/app/storage
+fi
 
 echo "--- All set to go! Would you like to play a game? ---"
