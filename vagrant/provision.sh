@@ -2,7 +2,7 @@
 
 # CONFIGURATION VARIABLES
 MYSQL_PASSWORD='root'
-LARAVEL_PROJECT=false
+LARAVEL_PROJECT=true
 
 echo "--- Good morning, master. Let's get to work. Installing now. ---"
 
@@ -59,8 +59,8 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 if $LARAVEL_PROJECT; then
-echo "--- Lets make sure the app storage directory is writable. ---"
-chmod -R o+w /vagrant/app/storage
+# echo "--- Lets make sure the app storage directory is writable. ---"
+# chmod -R o+w /vagrant/app/storage
 echo "--- Migrate the database for Laravel project ---"
 php /vagrant/artisan migrate --env=local
 echo "--- Now lets run the db:seed command! ---"
