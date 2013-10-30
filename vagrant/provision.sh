@@ -61,6 +61,10 @@ sudo mv composer.phar /usr/local/bin/composer
 if $LARAVEL_PROJECT; then
 echo "--- Lets make sure the app storage directory is writable. ---"
 chmod -R o+w /vagrant/app/storage
+echo "--- Migrate the database for Laravel project ---"
+php artisan migrate --env=local
+echo "--- Now lets run the db:seed command! ---"
+php artisan db:seed --env=local
 fi
 
 echo "--- All set to go! Would you like to play a game? ---"
