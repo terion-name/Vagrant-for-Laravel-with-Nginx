@@ -3,7 +3,7 @@ Much like [Jeffrey Way](https://github.com/JeffreyWay/Vagrant-Setup), [Eric Barn
 
 The same as [Josh Manders'](https://github.com/killswitch/Vagrant-Setup) (with Nginx) but with my editions:
 * Debian (wheezy64)
-* Updated shared folders mount (as of I've experiensed problems with permissions with original setup)
+* Updated shared folders mount (as of I've experienced problems with permissions with original setup)
 * Private network on IP 33.33.33.33
 
 If establishing of private network causes errors in VirtualBox, run (if on Mac):
