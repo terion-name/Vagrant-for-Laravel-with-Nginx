@@ -4,6 +4,9 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
+DB = true
+DBNAME = ‘database’
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.box = "wheezy64"
@@ -14,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.network :forwarded_port, guest: 80, host: 8080
 
-    config.vm.synced_folder "./", "/vagrant", id: "vagrant-root" , :owner => "vagrant", :group => "www-data"
+    config.vm.synced_folder "./", "/vagrant", id: "vagrant-root", :owner => "vagrant", :group => "www-data"
 
     config.vm.synced_folder "./app/storage", "/vagrant/app/storage", id: "vagrant-storage",
         :owner => "vagrant",
@@ -26,7 +29,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :group => "www-data",
         :mount_options => ["dmode=775","fmode=664"]
 
-    config.vm.provision :shell, :path => "vagrant/provision.sh"
+    config.vm.provision :shell do |shell|
+        shell.path = "vagrant/provision.sh"
+        shell.args = DB ? "db " + DBNAME : ""
+    end
 
     # If true, then any SSH connections made will enable agent forwarding.
     # Default value: false

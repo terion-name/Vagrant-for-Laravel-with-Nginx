@@ -4,6 +4,13 @@
 MYSQL_PASSWORD='root'
 LARAVEL_PROJECT=true
 
+if [ "$1" == "db" ]; then
+DB=true
+DBNAME="$2"
+else
+DB=false
+fi
+
 echo "--- Good morning, master. Let's get to work. Installing now. ---"
 
 echo "--- Updating packages list ---"
@@ -60,6 +67,11 @@ sudo service nginx restart
 echo "--- Composer is the future. But you knew that, did you master? Nice job. ---"
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
+
+if $DB; then
+echo "--- Create database. ---"
+mysql --user=root --password="$MYSQL_PASSWORD" -Bse "CREATE DATABASE IF NOT EXISTS $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci"
+fi
 
 if $LARAVEL_PROJECT; then
 # echo "--- Lets make sure the app storage directory is writable. ---"
