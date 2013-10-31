@@ -33,7 +33,7 @@ sudo apt-get install -y vim curl python-software-properties
 # sudo apt-get update
 
 echo "--- Installing PHP-specific packages ---"
-sudo apt-get install -y php5-fpm php5-cli php-pear nginx php5-curl php5-gd php5-imagick php5-mcrypt mysql-server mysql-client php5-mysql git-core
+sudo apt-get install -y php5-dev php5-fpm php5-cli php-pear nginx php5-curl php5-gd php5-imagick php5-mcrypt mysql-server mysql-client php5-mysql git-core
 
 echo "--- Installing and configuring Xdebug ---"
 sudo apt-get install -y php5-xdebug
