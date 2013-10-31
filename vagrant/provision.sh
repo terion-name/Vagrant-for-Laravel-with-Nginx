@@ -14,7 +14,7 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password ${MYSQL_PASSWORD}"
 
 echo "--- Redis time ---"
-sudo apt-get instal -y redis-server
+sudo apt-get install -y redis-server
 
 echo "--- Installing base packages ---"
 sudo apt-get install -y vim curl python-software-properties
@@ -22,11 +22,11 @@ sudo apt-get install -y vim curl python-software-properties
 # echo "--- We want the bleeding edge of PHP, right master? ---"
 # sudo add-apt-repository -y ppa:ondrej/php5
 
-echo "--- Updating packages list ---"
-sudo apt-get update
+# echo "--- Updating packages list ---"
+# sudo apt-get update
 
 echo "--- Installing PHP-specific packages ---"
-sudo apt-get install -y php5-fpm php5-cli nginx php5-curl php5-gd php5-imagick php5-mcrypt mysql-server mysql-client pdo_mysql git-core
+sudo apt-get install -y php5-fpm php5-cli nginx php5-curl php5-gd php5-imagick php5-mcrypt mysql-server mysql-client php5-mysql git-core
 
 echo "--- Installing and configuring Xdebug ---"
 sudo apt-get install -y php5-xdebug
