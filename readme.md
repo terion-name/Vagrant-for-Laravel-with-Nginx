@@ -6,6 +6,7 @@ The same as [Josh Manders'](https://github.com/killswitch/Vagrant-Setup) (with N
 * Redis
 * Updated shared folders mount (as of I've experienced problems with permissions with original setup)
 * Private network on IP 33.33.33.33
+* In Vagrantfile set DB creation flag and DBNAME (defaults to true and 'database') to create DB after provision
 
 If establishing of private network causes errors in VirtualBox, run (if on Mac):
 ```
