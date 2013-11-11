@@ -70,7 +70,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 if $DB; then
 echo "--- Create database. ---"
-mysql --user=root --password="$MYSQL_PASSWORD" -Bse "CREATE DATABASE IF NOT EXISTS $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci"
+mysql --user=root --password="$MYSQL_PASSWORD" -Bse "CREATE DATABASE IF NOT EXISTS \`$DBNAME\` CHARACTER SET utf8 COLLATE utf8_general_ci"
 fi
 
 if $LARAVEL_PROJECT; then
