@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 DB = true
-DBNAME = ‘database’
+DBNAME = 'database'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
