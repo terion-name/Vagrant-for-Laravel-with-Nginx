@@ -47,6 +47,11 @@ sudo sh -c 'echo "extension=mongo.so" >> /etc/php5/fpm/php.ini'
 echo "--- Installing and configuring Xdebug ---"
 sudo apt-get install -y php5-xdebug
 
+echo "--- Installing PHPUnit ---"
+wget https://phar.phpunit.de/phpunit.phar
+chmod +x phpunit.phar
+mv phpunit.phar /usr/local/bin/phpunit
+
 cat << EOF | sudo tee -a /etc/php5/mods-available/xdebug.ini
 xdebug.scream=1
 xdebug.cli_color=1
