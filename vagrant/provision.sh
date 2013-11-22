@@ -31,7 +31,12 @@ sudo apt-get install mongodb-10gen
 sudo /etc/init.d/mongodb start
 
 echo "--- Installing base packages ---"
-sudo apt-get install -y vim curl python-software-properties
+sudo apt-get install -y vim curl git-core build-essential openssl libssl-dev
+sudo apt-get install -y python-software-properties python g++ make
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+curl -3 https://npmjs.org/install.sh | sudo sh
 
 # echo "--- We want the bleeding edge of PHP, right master? ---"
 # sudo add-apt-repository -y ppa:ondrej/php5
