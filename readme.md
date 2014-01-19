@@ -1,4 +1,11 @@
-# My install Bash script for Vagrant.
+# NOT MAINTANED
+## See https://github.com/terion-name/Lagrant instead
+
+***
+***
+***
+
+## My install Bash script for Vagrant.
 Much like [Jeffrey Way](https://github.com/JeffreyWay/Vagrant-Setup), [Eric Barnes](https://github.com/ericbarnes/Vagrant-Setup) and [Josh Manders](https://github.com/killswitch/Vagrant-Setup), this is my version of Jeffrey's Vagrant Setup.
 
 The same as [Josh Manders'](https://github.com/killswitch/Vagrant-Setup) (with Nginx) but with my editions:
